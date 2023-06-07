@@ -37,6 +37,6 @@ jobs:
          username: ${{ secrets.USERNAME }}
          password: ${{ secrets.SECRET_KEY }}
          server_port: 22
-         local_dir: 
+         local_dir: jenkins-cicd-java-maven-demo/jenkins-cicd-java-maven-demo/target/
          remote_dir: /opt/tomee/apache-tomee-plus-9.0.0
 
