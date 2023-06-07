@@ -29,4 +29,14 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+                npm run build
+    - name: Deploy to Plesk
+      uses: SamKirkland/FTP-Deploy-Action@4.1.2
+      with:
+         server: ${{ secrets.HOST }}
+         username: ${{ secrets.USERNAME }}
+         password: ${{ secrets.SECRET_KEY }}
+         server_port: 22
+         local_dir: 
+         remote_dir: /opt/tomee/apache-tomee-plus-9.0.0
 
